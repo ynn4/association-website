@@ -1,0 +1,149 @@
+/* css/variables.css */
+/* ==========================================================================
+   LOCAL CAIRO VARIABLE FONT DEFINITION
+   ========================================================================== */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url('../fonts/Cairo-Variable.ttf') format('truetype-variations');
+}
+:root {
+    /* Core Palette - Royal Sapphire Blue */
+    --bs-primary: #1E40AF;
+    --bs-primary-rgb: 30, 64, 175;
+    --bs-primary-hover: #1D4ED8;
+
+    /* Deep Dark Crimson Red (No Pink Undertones) */
+    --bs-secondary: #991B1B;
+    /* Deep Crimson */
+    --bs-secondary-rgb: 153, 27, 27;
+    --bs-secondary-hover: #7F1D1D;
+
+    /* Dark Slate Neutrals */
+    --bs-dark: #0F172A;
+    /* Deep Slate for Headers */
+    --bs-dark-rgb: 15, 23, 42;
+    --bs-body-color: #334155;
+    /* Soft Charcoal Slate for Text */
+
+    /* Background Tints */
+    --bs-primary-subtle: #EFF6FF;
+    /* Ice Blue Tint */
+    --bs-secondary-subtle: #FEF2F2;
+    /* Soft Red Tint */
+    --bs-body-bg: #FAFAFA;
+    /* Off-White Clean Background */
+    --bs-subtle-bg: #F1F5F9;
+    /* Cool Slate Section Background */
+
+    /* Typography */
+    --bs-font-sans-serif: 'Cairo', system-ui, -apple-system, sans-serif;
+}
+
+/* Global Typography & Neutrals */
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--bs-dark);
+}
+
+.text-muted {
+    color: #64748B !important;
+}
+
+/* Color & Background Helpers */
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+.text-secondary,
+.text-danger {
+    color: var(--bs-secondary) !important;
+}
+
+.bg-secondary,
+.bg-danger {
+    background-color: var(--bs-secondary) !important;
+}
+
+.bg-primary-subtle {
+    background-color: var(--bs-primary-subtle) !important;
+    color: var(--bs-primary) !important;
+}
+
+.bg-secondary-subtle {
+    background-color: var(--bs-secondary-subtle) !important;
+    color: var(--bs-secondary) !important;
+}
+
+.bg-subtle {
+    background-color: var(--bs-subtle-bg) !important;
+}
+
+/* Primary CTA Button (Deep Dark Crimson Red Gradient) */
+.btn-primary {
+    background: linear-gradient(135deg, #B91C1C 0%, #7F1D1D 100%) !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(127, 29, 29, 0.25);
+    transition: all 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: linear-gradient(135deg, #991B1B 0%, #450A0A 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(127, 29, 29, 0.35);
+}
+
+/* Secondary / Outline Action Buttons */
+.btn-outline-secondary,
+.btn-outline-primary {
+    color: var(--bs-primary) !important;
+    border-color: #CBD5E1 !important;
+    background-color: #FFFFFF !important;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary-subtle) !important;
+    border-color: var(--bs-primary) !important;
+    color: var(--bs-primary) !important;
+}
+
+/* Clean Modern Cards & Hover Utilities */
+.card {
+    border: 1px solid #E2E8F0 !important;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+.hover-lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    border-color: var(--bs-primary) !important;
+    box-shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.12);
+}
